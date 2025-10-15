@@ -174,7 +174,58 @@
 
         .lecturas h3 {
             color: #003D7A;
+            margin-bottom: 25px;
+        }
+
+        .lecturas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .lectura-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .lectura-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .lectura-content h4 {
+            color: #003D7A;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .lectura-content p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
             margin-bottom: 15px;
+        }
+
+        .btn-lectura {
+            background: linear-gradient(135deg, #00A7E1 0%, #003D7A 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .btn-lectura:hover {
+            opacity: 0.9;
         }
 
         .lecturas ul {
@@ -339,13 +390,47 @@
             <div class="section">
                 <div class="lecturas">
                     <h3>📚 Lecturas Sugeridas</h3>
-                    <ul>
-                        <li><strong>Ley 98-03</strong> que crea el Centro Dominicana de Promoción de Inversiones de la República Dominicana</li>
-                        <li><strong>Plan Nacional de Fomento a las Exportaciones</strong></li>
-                        <li><strong>Decreto 275-17</strong> que Crea ProDominicana como Un Mecanismo de Coordinación y Ejecución de los Planes del Estado Dominicano en el Proceso de Implementación de la Estrategia Nacional de Promoción de las Exportaciones y Atracción de Inversiones</li>
-                        <li><strong>Decreto 334-07</strong> - Reglamento para el comercio y la exportación de desperdicios de metales, chatarras y otros desechos de cobre, aluminio y sus aleaciones</li>
-                        <li><strong>Guía de Exportación</strong> (disponible en los recursos)</li>
-                    </ul>
+                    <div class="lecturas-grid">
+                        <div class="lectura-item">
+                            <div class="lectura-content">
+                                <h4>📄 Ley 98-03</h4>
+                                <p>Ley que crea el Centro Dominicana de Promoción de Inversiones de la República Dominicana</p>
+                            </div>
+                            <a href="https://cnc.gob.do/2017/08/01/consejo-directivo-cei-rd/" target="_blank" class="btn-lectura">Ver Documento</a>
+                        </div>
+
+                        <div class="lectura-item">
+                            <div class="lectura-content">
+                                <h4>📊 Plan Nacional de Fomento a las Exportaciones</h4>
+                                <p>Plan Nacional de Fomento a las Exportaciones de la República Dominicana 2020-2030</p>
+                            </div>
+                            <a href="https://prodominicana.gob.do/Documentos/PD%20PNFERD%20W.pdf" target="_blank" class="btn-lectura">Descargar PDF</a>
+                        </div>
+
+                        <div class="lectura-item">
+                            <div class="lectura-content">
+                                <h4>📜 Decreto 275-17</h4>
+                                <p>Decreto que Crea ProDominicana como mecanismo de coordinación y ejecución de los planes del Estado Dominicano</p>
+                            </div>
+                            <a href="https://prodominicana.gob.do/wp/wp-content/themes/ceird/ceirdpdf/Decreto-275-17-Crea-PRODOMINICANA.pdf" target="_blank" class="btn-lectura">Descargar PDF</a>
+                        </div>
+
+                        <div class="lectura-item">
+                            <div class="lectura-content">
+                                <h4>♻️ Decreto 334-07</h4>
+                                <p>Reglamento para el comercio y exportación de desperdicios de metales, chatarras y desechos de cobre, aluminio</p>
+                            </div>
+                            <a href="https://www.ecolex.org/details/legislation/decreto-no-33407-reglamento-para-el-comercio-y-la-exportacion-de-desperdicios-de-metales-lex-faoc077280/" target="_blank" class="btn-lectura">Ver Información</a>
+                        </div>
+
+                        <div class="lectura-item">
+                            <div class="lectura-content">
+                                <h4>📘 Guía de Exportación</h4>
+                                <p>Guía completa de exportación disponible en los recursos de ProDominicana</p>
+                            </div>
+                            <a href="https://prodominicana.gob.do/servicios/exportacion" target="_blank" class="btn-lectura">Acceder</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
